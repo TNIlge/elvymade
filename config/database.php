@@ -5,10 +5,10 @@
  */
 
 // Paramètres de connexion à la base de données
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'dpg-d6c312h5pdvs73d7bb3g-a');
 define('DB_NAME', 'elvymade_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_USER', 'elvymade_db_user');
+define('DB_PASS', 'yZ6WESza24mNyFG6LcF3LsvzCc1iEAUv');
 define('DB_CHARSET', 'utf8mb4');
 
 /**

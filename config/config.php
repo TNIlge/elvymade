@@ -7,8 +7,8 @@
 // Informations du site
 define('SITE_NAME', 'ElvyMade');
 define('SITE_DESCRIPTION', 'Marketplace Camerounaise - Prospection d\'articles en ligne');
-define('SITE_URL', 'http://localhost/elvymade');
-define('SITE_EMAIL', 'contact@elvymade.cm');
+define('SITE_URL', 'https://elvymade.onrender.com/');
+define('SITE_EMAIL', 'ilgetchouala@gmail.com');
 
 // Paramètres de sécurité
 define('HASH_ALGO', 'sha256');
