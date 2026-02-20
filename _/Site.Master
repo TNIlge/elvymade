@@ -1,0 +1,830 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ISTMADCAMER.SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - ISTMAD</title>
+
+     <!-- Favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="istmad-assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="istmad-assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="istmad-assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="istmad-assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="IST MAD" />
+
+
+
+     <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="istmad-assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/nice-select/nice-select.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/thm-icons/style.css">
+    <link rel="stylesheet" href="istmad-assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="istmad-assets/vendors/animate/custom-animate.css" />
+    <link href="istmad-assets/css/animate.css" rel="stylesheet" />
+    <link href="istmad-assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="istmad-assets/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="istmad-assets/css/jquery-ui.min.css" rel="stylesheet" />
+    <!-- Module css -->
+    <link rel="stylesheet" href="istmad-assets/css/module-css/01-header-section.css">
+    <link rel="stylesheet" href="istmad-assets/css/module-css/02-banner-section.css">
+    <link rel="stylesheet" href="istmad-assets/css/module-css/03-about-section.css">
+    <link rel="stylesheet" href="istmad-assets/css/module-css/04-fact-counter-section.css">
+    <link rel="stylesheet" href="istmad-assets/css/module-css/05-testimonial-section.css">
+    <link rel="stylesheet" href="istmad-assets/css/module-css/06-partner-section.css">
+    <link rel="stylesheet" href="istmad-assets/css/module-css/07-footer-section.css">
+    <link rel="stylesheet" href="istmad-assets/css/module-css/08-blog-section.css">
+    <link href="istmad-assets/css/module-css/09-breadcrumb-section.css" rel="stylesheet" />
+    <link href="istmad-assets/css/module-css/10-contact.css" rel="stylesheet" />
+    <!-- template styles -->
+    <link rel="stylesheet" href="istmad-assets/css/style.css" />
+    <link rel="stylesheet" href="istmad-assets/css/responsive.css" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server" ID="scriptManager"></asp:ScriptManager>
+        <!-- Start Preloader -->
+    <div class="loader-wrap">
+        <div class="preloader">
+            <div class="preloader-close">x</div>
+            <div id="handle-preloader" class="handle-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+                    <div class="txt-loading">
+                        <span data-text-preloader="i" class="letters-loading">
+                            i
+                        </span>
+                        <span data-text-preloader="s" class="letters-loading">
+                            s
+                        </span>
+                        <span data-text-preloader="t" class="letters-loading">
+                            t
+                        </span>
+                        <span data-text-preloader="m" class="letters-loading">
+                            m
+                        </span>
+                        <span data-text-preloader="a" class="letters-loading">
+                            a
+                        </span>
+                        <span data-text-preloader="d" class="letters-loading">
+                            d
+                        </span>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+
+    <div class="page-wrapper">
+
+        <!--Start Main Header One-->
+        <header class="main-header main-header-one main-header-one--two">
+            <!--Start Main Header One Top-->
+            <div class="main-header-one__top">
+                <div class="auto-container">
+                    <div class="main-header-one__top-inner">
+                        <div class="main-header-one__top-left">
+                            <ul class="main-header-one__top-left-menu">
+                                <li><a href="#">IST MAD- <span>Make a Difference</span></a></li>
+                            </ul>
+
+                            <ul class="main-header-one__top-left-social-link">
+                                <li><a href="https://fb.com/istmadofficiel" target="_blank"><span class="icon-facebook-app-symbol"></span></a></li>
+                                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                                <li><a href="#"><span class="icon-instagram"></span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="main-header-one__top-right">
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-mail-1"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:infos@istmad.cm">infos@istmad.cm</a></p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-wall-clock"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Heures d'ouverture : Lun - Ven de 8h00 à 18h00</p>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                      <div class="language-selection">
+                                        <ul class="language">
+                                            <li runat="server" id="englishListItem">
+                                                <asp:LinkButton runat="server" ID="englishLanguageLB" title="View website in English" OnClick="englishLanguageLB_Click">
+                                                  <%-- <img runat="server" src="~/images/ukflag.png" width="22" height="22" />--%>
+                                                     <span>English</span>
+                                                </asp:LinkButton>
+                                            </li>
+                                            <li runat="server" id="frenchListItem">
+                                                <asp:LinkButton runat="server" ID="frenchLanguageLB" title="View website in French" OnClick="frenchLanguageLB_Click">
+                                                    <span>Français</span>
+                                                </asp:LinkButton>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Main Header One Top-->
+
+            <!--Start Main Header One Bottom-->
+            <div class="main-header-one__bottom">
+                <nav class="main-menu main-menu-one">
+                    <div class="main-menu__wrapper clearfix">
+                        <div class="auto-container">
+                            <div class="main-menu__wrapper-inner">
+
+                                <div class="main-header-one__bottom-left">
+                                    <div class="logo-box-one">
+                                        <a href="Default.aspx">
+                                            <img src="istmad-assets/images/resources/istmad-logo.svg" alt="IST MAD LOGO" title="IST MAD Logo">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="main-header-one__bottom-right">
+                                    <div class="main-menu-box">
+                                        <a href="#" class="mobile-nav__toggler">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                       <ul class="main-menu__list">
+                                            <li><a href="Default.aspx">Bienvenue</a> </li>
+                                            <li class="dropdown">
+                                                <a href="#">L’institut</a>
+                                                <ul>
+                                                     <li><a href="about.aspx">A propos de nous</a></li>
+                                                    <li><a href="promoteur.aspx">Mot du Promoteur</a></li>
+                                                    <li><a href="atouts-Valeurs-Missions.aspx">Atouts, Valeurs, Missions</a></li>
+                                                     <li> <a href="galerie-de-photos.aspx">Galerie de Photos</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a href="bts.aspx">Nos filières</a>
+                                                <ul>
+                                                    <li><a href="bts.aspx">BTS - HND</a></li>                                              
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="inscription.aspx">Inscription en ligne</a>
+                                            </li>
+                                                                                                                      
+                                            <li>
+                                                <a href="contact.aspx">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="main-header-one__bottom-right-number">
+                                        <div class="icon">
+                                            <span class="icon-headphones"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Appeler à tout moment</p>
+                                            <a href="tel:+237697685898">+237 675 65 81 65</a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--End Main Header One Bottom-->
+
+        </header>
+        <!--End Main Header One-->
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">  </asp:ContentPlaceHolder>
+           
+         <asp:UpdatePanel runat="server" ID="emailSubsribeUP" ValidateRequestMode="Disabled"> <ContentTemplate>
+
+          <!--Start Newsletter Style1-->
+        <section class="newsletter-style1">
+            <div class="auto-container">     
+                   <div class="sec-title text-center">        
+                    <h2 style="color:white;">Ne manquez rien de notre actualité ! </h2>
+                </div>
+                <div class="row">
+                 
+                    <h2 style="align-content:center;"></h2>
+                         
+                    <!--Start Newsletter Style1 Title-->
+                    <div class="col-xl-4">
+                        <div class="newsletter-style1__title">
+                            <h2>Inscription à<br /> la newsletter</h2>
+
+                        </div>
+                        
+                    </div>
+                    <!--End Newsletter Style1 Title-->
+
+                    <!--Start Newsletter Style1 Form-->
+                    <div class="col-xl-8">
+                          <asp:Panel runat="server" ID="feedbackPanel" CssClass="alert">
+                          <asp:Label runat="server" ID="feedbackMsgLbl"></asp:Label>
+                         </asp:Panel>
+                        <div class="newsletter-style1__form">
+                            <div action="#" class="comment-one__form contact-form-validated"
+                                novalidate="novalidate">
+                                <div class="newsletter-style1__form-inner">
+                                     <asp:Panel runat="server" DefaultButton="subscribeBtn">
+                                    <ul>
+                                       
+                                        <li>
+                                            <div class="comment-form__input-box">
+                                                 <ajaxToolkit:TextBoxWatermarkExtender runat="server" TargetControlID="subscribeEmailTB" WatermarkText="Votre adresse e-mail" />
+                                                 <asp:Textbox runat="server" ID="subscribeEmailTB" placeholder="Votre adresse e-mail" ></asp:Textbox>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    </asp:Panel>
+                                    <div class="newsletter-style1__form-btn">                                         
+                                           <asp:Button runat="server" ID="subscribeBtn" CssClass="btn-one newsletter-style1__form-btn" ValidationGroup="Subscribe" Text="Souscrire" data-loading-text="Please wait..." OnClick="subscribeBtn_Click"/>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Newsletter Style1 Form-->               
+
+              </div>
+            </div>
+        </section>
+        <!--End Newsletter Style1-->
+
+ </ContentTemplate>
+
+         </asp:UpdatePanel>
+
+        <%-- <!--Start Blog Style1-->
+        <section class="blog-style1 blog-style1--style2">
+            <div class="shape1"><img src="istmad-assets/images/shapes/blog-v1-shape1.png" alt="#"></div>
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <div class="sub-title">
+                        <h6>ACTUALITES</h6>
+                    </div>
+                    <h2>En savoir plus sur l'ISTMAD</h2>
+                </div>
+                <div class="row">
+                    <!--Start Blog Style1 Single-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="blog-style1__single">
+                            <div class="blog-style1__single-img">
+                                <div class="inner">
+                                    <img src="istmad-assets/images/blog/blog-v2-1.jpg" alt="#">
+                                </div>
+                            </div>
+
+                            <div class="blog-style1__single-content">
+                                <div class="date-box">
+                                    <p> <span class="icon-calendar"></span> May 15, 2023</p>
+                                </div>
+                                <h2><a href="blog-details.html">Cameroon will be celebrating its National Day on May 20th</a>
+                                </h2>
+                                <ul class="meta-box">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-user"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Admin</a></p>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <div class="blog-style1__single-conten-btn">
+                                    <a class="btn-one" href="#">
+                                        <span class="txt">Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Blog Style1 Single-->
+
+                    <!--Start Blog Style1 Single-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInDown" data-wow-delay=".3s">
+                        <div class="blog-style1__single">
+                            <div class="blog-style1__single-img">
+                                <div class="inner">
+                                    <img src="istmad-assets/images/blog/blog-v2-2.jpg" alt="#">
+                                </div>
+                            </div>
+
+                            <div class="blog-style1__single-content">
+                                <div class="date-box">
+                                    <p> <span class="icon-calendar"></span> May 28, 2023</p>
+                                </div>
+                                <h2><a href="#">Assistance For Homes And Properties Real Estate</a></h2>
+                                <ul class="meta-box">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-user"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Admin</a></p>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                                <div class="blog-style1__single-conten-btn">
+                                    <a class="btn-one" href="blog-details.html">
+                                        <span class="txt">Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Blog Style1 Single-->
+
+                    <!--Start Blog Style1 Single-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="blog-style1__single">
+                            <div class="blog-style1__single-img">
+                                <div class="inner">
+                                    <img src="istmad-assets/images/blog/blog-v2-3.jpg" alt="#">
+                                </div>
+                            </div>
+
+                            <div class="blog-style1__single-content">
+                                <div class="date-box">
+                                    <p> <span class="icon-calendar"></span> Apr 17, 2023</p>
+                                </div>
+                                <h2><a href="blog-details.html">Long-Term Vision Of Health & Attractive Facility</a>
+                                </h2>
+                                <ul class="meta-box">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-user"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="#">Admin</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="blog-style1__single-conten-btn">
+                                    <a class="btn-one" href="blog-details.html">
+                                        <span class="txt">Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Blog Style1 Single-->
+                </div>
+            </div>
+        </section>
+        <!--End Blog Style1-->--%>
+
+        <!--Start Cta Style1-->
+        <section class="cta-style1">
+            <div class="cta-style1__bg" style="background-image: url(istmad-assets/images/backgrounds/cta-v1-bg.png);"></div>
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="cta-style1__inner">
+                            <div class="cta-style1__title">
+                                <div class="sec-title">
+                                    <h2>Prêt à passer à l'étape suivante ?</h2>
+                                </div>
+                            </div>
+
+                            <div class="cta-style1__btn">
+                                <a class="btn-one" href="inscription.aspx">
+                                    <span class="txt">Postuler maintenant >></span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Cta Style1-->
+
+
+           <!--Start MAD ACADEMY Partners  -->
+            <div class="government-voice__bottom">
+                <div class="auto-container">
+                    <div class="row">
+                         <div class="sec-title text-center">        
+                            <h2 style="color:white;">Nos Partenaires</h2>
+                        </div>
+                        <!--Start MAD ACADEMY Partners-->
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="government-voice__bottom-content">
+
+                                <div class="owl-carousel owl-theme thm-owl__carousel government-voice__bottom-carousel"
+                                    data-owl-options='{
+                                    "loop": true,
+                                    "autoplay": true,
+                                    "margin": 30,
+                                    "nav": false,
+                                    "dots": false,
+                                    "smartSpeed": 500,
+                                    "autoplayTimeout": 10000,
+                                    "navText": ["<span class=\"icon-left-arrow-1\"></span>","<span class=\"icon-next\"></span>"],
+                                    "responsive": {
+                                            "0": {
+                                                "items": 1
+                                            },
+                                            "768": {
+                                                "items": 2
+                                            },
+                                            "992": {
+                                                "items": 3
+                                            },
+                                            "1200": {
+                                                "items": 4
+                                            }
+                                        }
+                                    }'>
+
+                                    <!--Start Government Voice Bottom Single-->
+                                    <div class="government-voice__bottom-single text-center">
+                                        <img src="istmad-assets/images/partner/partner01.png" />
+                                    </div>
+                                    <!--End Government Voice Bottom Single-->
+
+                                     <!--Start Government Voice Bottom Single-->
+                                    <div class="government-voice__bottom-single text-center">
+                                        <img src="istmad-assets/images/partner/partner02.png" />
+                                    </div>
+                                    <!--End Government Voice Bottom Single-->
+
+                                     <!--Start Government Voice Bottom Single-->
+                                    <div class="government-voice__bottom-single text-center">
+                                        <img src="istmad-assets/images/partner/partner03.png" />
+                                    </div>
+                                    <!--End Government Voice Bottom Single-->
+
+                                     <!--Start Government Voice Bottom Single-->
+                                    <div class="government-voice__bottom-single text-center">
+                                        <img src="istmad-assets/images/partner/partner04.png" />
+                                    </div>
+                                    <!--End Government Voice Bottom Single-->
+
+                                     <!--Start Government Voice Bottom Single-->
+                                    <div class="government-voice__bottom-single text-center">
+                                        <img src="istmad-assets/images/partner/partner05.png" />
+                                    </div>
+                                    <!--End Government Voice Bottom Single-->
+
+                                     <!--Start Government Voice Bottom Single-->
+                                    <div class="government-voice__bottom-single text-center">
+                                        <img src="istmad-assets/images/partner/partner06.png" />
+                                    </div>
+                                    <!--End Government Voice Bottom Single-->
+
+                                     <!--Start Government Voice Bottom Single-->
+                                    <div class="government-voice__bottom-single text-center">
+                                        <img src="istmad-assets/images/partner/partner07.png" />
+                                    </div>
+                                    <!--End Government Voice Bottom Single-->
+                               
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Government Voice Bottom Content-->
+                    </div>
+                </div>
+            </div>
+            <!--End Government Voice Bottom-->
+
+
+        <!--Start footer area -->
+        <footer class="footer-area">
+            <div class="footer-area__shape1">
+                <img src="istmad-assets/images/shapes/footer-v1-shape1.png" alt="#">
+            </div>
+            <!--Start Footer-->
+            <div class="footer">
+                <div class="auto-container">
+                    <div class="row">
+                        <!--Start single footer widget-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.1s">
+                            <div class="single-footer-widget">
+                                <div class="our-company-info">
+                                    <div class="footer-logo-style1">
+                                        <a href="default.aspx">
+                                            <img src="istmad-assets/images/resources/istmad-logo.svg" alt="IST MAD Logo"
+                                                title="">
+                                        </a>
+                                    </div>
+                                    <div class="our-company-info__text">
+                                        <p>IST MAD - Institut Supérieur de Technologie et du Management Appliquées au Développement</p>
+                                    </div>
+                                     <div class="footer-widget--contact-info">  
+                                    <ul>      
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-mail-1"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="mailto:infos@istmad.cm">infos@istmad.cm</a></p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-telephone"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p><a href="tel:+237679473636">+237 675 65 81 65</a></p>
+                                            </div>
+                                        </li>
+                                       
+                                       
+                                    </ul>
+                                </div>
+                                    <ul class="our-company-info__social-link">
+                                        <li>
+                                            <a href="https://fb.com/istmadofficiel" target="_blank"><span class="icon-facebook-app-symbol"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon-instagram"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+
+
+                        <!--Start single footer widget-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
+                            <div class="single-footer-widget single-footer-widget--explore">
+                                <div class="title">
+                                    <h3>LIENS UTILES </h3>
+                                </div>
+                                <div class="footer-widget-links">
+                                    <ul>
+                                        <li> <a href="Default.aspx">Bienvenue</a></li>
+                                        <li> <a href="about.aspx">A propos de nous</a></li>
+                                        <li> <a href="bts.aspx">Nos filières</a></li>
+                                        <li><a href="inscription.aspx">Inscription en ligne</a></li>
+                                        <li> <a href="promoteur.aspx">Mot du Promoteur</a></li>
+                                       
+                                        <li>  <a href="contact.aspx">Contact</a></li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+
+                        <!--Start single footer widget-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
+                            <div class="single-footer-widget single-footer-widget--links">
+                                <div class="title">
+                                    <h3>BTS / HND</h3>
+                                </div>
+                                <div class="footer-widget-links">
+                                    <ul>
+                                        <li> <a href="bts-commerce-vente.aspx">COMMERCE - VENTE </a></li>
+                                        <li> <a href="bts-information-et-communication.aspx">INFORMATION ET COMMUNICATION </a></li>
+                                        <li> <a href="bts-resaux-et-telecommunications.aspx"> RESAUX ET TELECOMMUNICATIONS </a></li>
+                                        <li><a href="bts-carrieres-juridiques.aspx"> CARRIERES JURIDIQUES </a></li>
+                                        <li> <a href="bts-gestion.aspx"> GESTION </a></li>
+                                       
+                                        <li> <a href="bts-genie-informatique.aspx">GENIE INFORMATIQUE </a></li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+
+                        <!--Start single footer widget-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
+                            <div class="single-footer-widget footer-widget--contact">
+                                <div class="title">
+                                    <h3>Localisation</h3>
+                                </div>
+                                <div class="footer-widget--contact-info">  
+                                    <ul>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="icon-pin"></span>
+                                            </div>
+                                            <div class="text">
+                                                <p>Ngodi akwa - Carrefour<br /> Cyrille Makanaky</p>
+                                            </div>
+                                        </li>
+
+
+                                       
+                                        <li>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1009.4413780581988!2d9.706970923941723!3d4.045508943082847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061136d4a107509%3A0x7ee4b13f6b2c6702!2sISTMAD!5e0!3m2!1sen!2scm!4v1684289850860!5m2!1sen!2scm" width="350" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+                    </div>
+                </div>
+            </div>
+            <!--End Footer-->
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="bottom-inner text-center">
+                        <div class="copyright">
+                            <p>Copyright 2023 by <a href="#">Group MAD</a> All Right Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!--End footer area-->
+
+    </div>
+    <!-- /.page-wrapper -->
+
+         
+
+
+
+
+            <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler">
+                <i class="icon-plus"></i>
+            </span>
+            <div class="logo-box">
+                <a href="Default.aspx" aria-label="logo image">
+                    <img src="istmad-assets/images/resources/istmad-logo.svg" alt="IST MAD LOGO" title="IST MAD Logo">
+                </a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:infos@istmad.cm">infos@istmad.cm</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+237697685898">+237 697 685 898</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="https://fb.com/istmadofficiel" target="_blank" class="fab fa-facebook-square"></a>
+                <a href="#" class="fab fa-pinterest-p"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+
+            <br />
+             
+                                      <div class="language-selection">
+                                        <ul class="language">
+                                            <li runat="server" id="Li1">
+                                                <asp:LinkButton runat="server" ID="LinkButton1" title="View website in English" OnClick="englishLanguageLB_Click">
+                                                  <%-- <img runat="server" src="~/images/ukflag.png" width="22" height="22" />--%>
+                                                     <span>English</span>
+                                                </asp:LinkButton>
+                                            </li>
+                                            <li runat="server" id="Li2">
+                                                <asp:LinkButton runat="server" ID="LinkButton2" title="View website in French" OnClick="frenchLanguageLB_Click">
+                                                    <span>Français</span>
+                                                </asp:LinkButton>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+
+        </div>
+    </div>
+
+         <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <div action="#">
+                <label for="search" class="sr-only">search here</label>
+                <input type="text" id="search" placeholder="Search Here..." />
+                <button type="submit" aria-label="search submit" class="thm-btn">
+                    <i class="icon-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <i class="icon-down-arrow"></i>
+    </a>
+   
+    <!-- notification soft-popout -->
+    <div class="ken-alert alert">
+        <label class="alert-lbl"></label>
+    </div>
+
+    <!-- Default Update Progress -->
+    <asp:UpdateProgress ID="mainUpdateProgress" runat="server">
+        <ProgressTemplate>
+            <div class="loadingBox">
+                <div class="loadingImage">
+                    <i class="fa fa-circle-o-notch animated faa-spin faa-fast"></i>
+                    <span class="animated faa-passing"></span>
+                </div>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+
+   
+  <script src="istmad-assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="istmad-assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="istmad-assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="istmad-assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="istmad-assets/vendors/circleType/jquery.circleType.js"></script>
+    <script src="istmad-assets/vendors/circleType/jquery.lettering.min.js"></script>
+    <script src="istmad-assets/vendors/isotope/isotope.js"></script>
+    <script src="istmad-assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="istmad-assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="istmad-assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="istmad-assets/vendors/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="istmad-assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="istmad-assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="istmad-assets/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="istmad-assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="istmad-assets/vendors/odometer/odometer.min.js"></script>
+    <script src="istmad-assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="istmad-assets/vendors/parallax/parallax.min.js"></script>
+    <script src="istmad-assets/vendors/swiper/swiper.min.js"></script>
+    <script src="istmad-assets/vendors/timepicker/timePicker.js"></script>
+    <script src="istmad-assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="istmad-assets/vendors/typed-2.0.11/typed-2.0.11.js"></script>
+    <script src="istmad-assets/vendors/vegas/vegas.min.js"></script>
+    <script src="istmad-assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="istmad-assets/vendors/wow/wow.js"></script>
+    <script src="istmad-assets/vendors/isotope/isotope.js"></script>
+    <script src="istmad-assets/vendors/jarallax/jarallax.min.js"></script>
+
+    <!-- Template js -->
+    <script src="istmad-assets/js/custom.js"></script>
+        <script src="Scripts/site.js"></script>
+
+   
+   <script id="pixel-chaty" async="true" src="https://cdn.chaty.app/pixel.js?id=YmwQtJMd"></script>
+
+    </form>
+</body>
+</html>

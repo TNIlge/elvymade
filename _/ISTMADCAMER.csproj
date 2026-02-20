@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D20F3BE-B36F-4CC7-B5CC-2C76C4C38580}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISTMADCAMER</RootNamespace>
+    <AssemblyName>ISTMADCAMER</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44388</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="actualites.aspx" />
+    <Content Include="admission.aspx" />
+    <Content Include="assurance.aspx" />
+    <Content Include="atouts-Valeurs-Missions.aspx" />
+    <Content Include="banque-et-finance.aspx" />
+    <Content Include="bts-carrieres-juridiques.aspx" />
+    <Content Include="bts-commerce-vente.aspx" />
+    <Content Include="bts-genie-informatique.aspx" />
+    <Content Include="bts-gestion.aspx" />
+    <Content Include="bts-information-et-communication.aspx" />
+    <Content Include="bts-resaux-et-telecommunications.aspx" />
+    <Content Include="bts.aspx" />
+    <Content Include="commerce-international.aspx" />
+    <Content Include="communication-des-organisations.aspx" />
+    <Content Include="comptabilite-et-gestion-des-entreprises.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\Bootstrap\bootstrap.css" />
+    <Content Include="Content\css\Bootstrap\media.css" />
+    <Content Include="Content\css\Bootstrap\mixins.css" />
+    <Content Include="Content\css\Bootstrap\mixins\alerts.css" />
+    <Content Include="Content\css\Bootstrap\mixins\background-variant.css" />
+    <Content Include="Content\css\Bootstrap\mixins\border-radius.css" />
+    <Content Include="Content\css\Bootstrap\mixins\buttons.css" />
+    <Content Include="Content\css\Bootstrap\mixins\center-block.css" />
+    <Content Include="Content\css\Bootstrap\mixins\clearfix.css" />
+    <Content Include="Content\css\Bootstrap\mixins\forms.css" />
+    <Content Include="Content\css\Bootstrap\mixins\gradients.css" />
+    <Content Include="Content\css\Bootstrap\mixins\grid-framework.css" />
+    <Content Include="Content\css\Bootstrap\mixins\grid.css" />
+    <Content Include="Content\css\Bootstrap\mixins\hide-text.css" />
+    <Content Include="Content\css\Bootstrap\mixins\image.css" />
+    <Content Include="Content\css\Bootstrap\mixins\labels.css" />
+    <Content Include="Content\css\Bootstrap\mixins\list-group.css" />
+    <Content Include="Content\css\Bootstrap\mixins\nav-divider.css" />
+    <Content Include="Content\css\Bootstrap\mixins\nav-vertical-align.css" />
+    <Content Include="Content\css\Bootstrap\mixins\opacity.css" />
+    <Content Include="Content\css\Bootstrap\mixins\pagination.css" />
+    <Content Include="Content\css\Bootstrap\mixins\panels.css" />
+    <Content Include="Content\css\Bootstrap\mixins\progress-bar.css" />
+    <Content Include="Content\css\Bootstrap\mixins\reset-filter.css" />
+    <Content Include="Content\css\Bootstrap\mixins\reset-text.css" />
+    <Content Include="Content\css\Bootstrap\mixins\resize.css" />
+    <Content Include="Content\css\Bootstrap\mixins\responsive-visibility.css" />
+    <Content Include="Content\css\Bootstrap\mixins\size.css" />
+    <Content Include="Content\css\Bootstrap\mixins\tab-focus.css" />
+    <Content Include="Content\css\Bootstrap\mixins\table-row.css" />
+    <Content Include="Content\css\Bootstrap\mixins\text-emphasis.css" />
+    <Content Include="Content\css\Bootstrap\mixins\text-overflow.css" />
+    <Content Include="Content\css\Bootstrap\mixins\vendor-prefixes.css" />
+    <Content Include="Content\css\Bootstrap\normalize.css" />
+    <Content Include="Content\css\Bootstrap\print.css" />
+    <Content Include="Content\css\Bootstrap\responsive-embed.css" />
+    <Content Include="Content\css\Bootstrap\theme.css" />
+    <Content Include="Content\css\Bootstrap\variables.css" />
+    <Content Include="Content\css\common.css" />
+    <Content Include="Content\css\common.min.css" />
+    <Content Include="Content\css\FontAwesome\font-awesome.css" />
+    <Content Include="Content\css\FontAwesome\mixins.css" />
+    <Content Include="Content\css\FontAwesome\variables.css" />
+    <Content Include="Content\css\libraries.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\site.min.css" />
+    <Content Include="Content\css\structure.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\less\common.css" />
+    <Content Include="Content\less\common.min.css" />
+    <Content Include="Content\less\site.css" />
+    <Content Include="Content\less\site.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="default.aspx" />
+    <Content Include="douane-et-transit.aspx" />
+    <Content Include="droit-des-affaires-et-de-lentreprise.aspx" />
+    <Content Include="droit-foncier-et-domanial.aspx" />
+    <Content Include="e-commerce-et-marketing-numerique.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="galerie-de-photos.aspx" />
+    <Content Include="genie-informatique.aspx" />
+    <Content Include="genie-logiciel.aspx" />
+    <Content Include="gestion-de-la-qualite.aspx" />
+    <Content Include="gestion-des-projets.aspx" />
+    <Content Include="gestion-des-ressources-humaines.aspx" />
+    <Content Include="gestion-des-systemes-dInformation.aspx" />
+    <Content Include="gestion-fiscale.aspx" />
+    <Content Include="gestion-logistique-et-transport.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="hnd.aspx" />
+    <Content Include="infographie-et-web-design.aspx" />
+    <Content Include="informatique-industriel-et-automatisme.aspx" />
+    <Content Include="inscription.aspx" />
+    <Content Include="istmad-assets\css\animate.css" />
+    <Content Include="istmad-assets\css\dark.css" />
+    <Content Include="istmad-assets\css\font-awesome.min.css" />
+    <Content Include="istmad-assets\css\fontawesome.min.css" />
+    <Content Include="istmad-assets\css\jquery-ui.min.css" />
+    <Content Include="istmad-assets\css\module-css\01-header-section.css" />
+    <Content Include="istmad-assets\css\module-css\02-banner-section.css" />
+    <Content Include="istmad-assets\css\module-css\03-about-section.css" />
+    <Content Include="istmad-assets\css\module-css\04-fact-counter-section.css" />
+    <Content Include="istmad-assets\css\module-css\05-testimonial-section.css" />
+    <Content Include="istmad-assets\css\module-css\06-partner-section.css" />
+    <Content Include="istmad-assets\css\module-css\07-footer-section.css" />
+    <Content Include="istmad-assets\css\module-css\08-blog-section.css" />
+    <Content Include="istmad-assets\css\module-css\09-breadcrumb-section.css" />
+    <Content Include="istmad-assets\css\module-css\10-contact.css" />
+    <Content Include="istmad-assets\css\responsive.css" />
+    <Content Include="istmad-assets\css\style.css" />
+    <Content Include="istmad-assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="istmad-assets\fonts\lightcaseeead.svg" />
+    <Content Include="istmad-assets\images\about\about-istmad.jpg" />
+    <Content Include="istmad-assets\images\about\about-page-about-img1.jpg" />
+    <Content Include="istmad-assets\images\about\about-v1-img1.png" />
+    <Content Include="istmad-assets\images\about\about-v2-img1.jpg" />
+    <Content Include="istmad-assets\images\about\about-v2-img2.jpg" />
+    <Content Include="istmad-assets\images\about\about-v3-img1.jpg" />
+    <Content Include="istmad-assets\images\backgrounds\breadcrumb-v1-bg.jpg" />
+    <Content Include="istmad-assets\images\backgrounds\breadcrumb-v1-bg2.jpg" />
+    <Content Include="istmad-assets\images\backgrounds\cta-v1-bg.png" />
+    <Content Include="istmad-assets\images\backgrounds\events-v1-bg.png" />
+    <Content Include="istmad-assets\images\backgrounds\fact-counter-v1-bg.png" />
+    <Content Include="istmad-assets\images\backgrounds\fact-counter-v2-bg.png" />
+    <Content Include="istmad-assets\images\backgrounds\faq-page-bg.png" />
+    <Content Include="istmad-assets\images\backgrounds\istmad-bg.png" />
+    <Content Include="istmad-assets\images\backgrounds\testimonials-v2-bg.png" />
+    <Content Include="istmad-assets\images\backgrounds\video-v1-bg.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-details-img1.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-details-img2.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-details-img3.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-details-img4.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-standard-img1.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-standard-img2.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-standard-img3.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-standard-img4.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-standard-img5.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-1.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-10.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-11.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-12.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-2.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-3.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-4.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-5.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-6.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-7.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-8.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v1-9.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v2-1.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v2-2.jpg" />
+    <Content Include="istmad-assets\images\blog\blog-v2-3.jpg" />
+    <Content Include="istmad-assets\images\favicons\apple-touch-icon.png" />
+    <Content Include="istmad-assets\images\favicons\favicon-16x16.png" />
+    <Content Include="istmad-assets\images\favicons\favicon-32x32.png" />
+    <Content Include="istmad-assets\images\footer\footer-logo-1.png" />
+    <Content Include="istmad-assets\images\home-showcase\home-showcase-1-1.jpg" />
+    <Content Include="istmad-assets\images\home-showcase\home-showcase-1-2.jpg" />
+    <Content Include="istmad-assets\images\home-showcase\home-showcase-1-3.jpg" />
+    <Content Include="istmad-assets\images\home-showcase\home-showcase-1-4.jpg" />
+    <Content Include="istmad-assets\images\resources\about-v1-signature.png" />
+    <Content Include="istmad-assets\images\resources\departments-details-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\departments-details-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\event-details-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\event-details-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\event-details-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\event-details-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\event-details-img5.jpg" />
+    <Content Include="istmad-assets\images\resources\event-details-img6.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v1-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v1-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v1-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v1-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v1-img5.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img5.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img6.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img7.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img8.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v2-img9.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v3-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v3-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v3-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\events-v3-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\government-voice-img1.png" />
+    <Content Include="istmad-assets\images\resources\history-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\history-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\history-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\history-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\istmad-logo.png" />
+    <Content Include="istmad-assets\images\resources\istmad-logo.svg" />
+    <Content Include="istmad-assets\images\resources\logo-1.png" />
+    <Content Include="istmad-assets\images\resources\mobile-nav-logo.png" />
+    <Content Include="istmad-assets\images\resources\portfolio-grid-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-grid-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-grid-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-grid-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-grid-img5.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-grid-img6.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-masonry-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-masonry-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-masonry-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-masonry-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-masonry-img5.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-masonry-img6.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-v1-img1.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-v1-img2.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-v1-img3.jpg" />
+    <Content Include="istmad-assets\images\resources\portfolio-v1-img4.jpg" />
+    <Content Include="istmad-assets\images\resources\team-details-signature.png" />
+    <Content Include="istmad-assets\images\services\instant-services-v1-img1.jpg" />
+    <Content Include="istmad-assets\images\services\services-v2-img1.jpg" />
+    <Content Include="istmad-assets\images\services\services-v2-img2.jpg" />
+    <Content Include="istmad-assets\images\services\services-v2-img3.jpg" />
+    <Content Include="istmad-assets\images\services\services-v2-img4.jpg" />
+    <Content Include="istmad-assets\images\services\services-v2-img5.jpg" />
+    <Content Include="istmad-assets\images\services\services-v2-img6.jpg" />
+    <Content Include="istmad-assets\images\shapes\blog-v1-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\cta-v2-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\features-v1-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\features-v2-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\footer-v1-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\home-v2-logo-bg.png" />
+    <Content Include="istmad-assets\images\shapes\instant-services-v2-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\services-page-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\services-v1-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\services-v1-shape2.png" />
+    <Content Include="istmad-assets\images\shapes\services-v1-shape3.png" />
+    <Content Include="istmad-assets\images\shapes\services-v2-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\services-v2-shape2.png" />
+    <Content Include="istmad-assets\images\shapes\services-v3-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\slider-v3-shape1.png" />
+    <Content Include="istmad-assets\images\shapes\slider-v3-shape2.png" />
+    <Content Include="istmad-assets\images\shapes\slider-v3-shape3.png" />
+    <Content Include="istmad-assets\images\shapes\slider-v3-shape5.png" />
+    <Content Include="istmad-assets\images\shapes\slider-v3-shape6.png" />
+    <Content Include="istmad-assets\images\shapes\slider-v3-shape7.png" />
+    <Content Include="istmad-assets\images\shapes\slider-v3-shape8.png" />
+    <Content Include="istmad-assets\images\shapes\testimonials-page-bg.png" />
+    <Content Include="istmad-assets\images\shapes\testimonials-v1-shape2.png" />
+    <Content Include="istmad-assets\images\shapes\thm-shape1.png" />
+    <Content Include="istmad-assets\images\sidebar\blog-post-img1.jpg" />
+    <Content Include="istmad-assets\images\sidebar\blog-post-img2.jpg" />
+    <Content Include="istmad-assets\images\sidebar\blog-post-img3.jpg" />
+    <Content Include="istmad-assets\images\sidebar\istmad-banner.jpg" />
+    <Content Include="istmad-assets\images\sidebar\istmad-banner.png" />
+    <Content Include="istmad-assets\images\sidebar\istmad-side-01.jpg" />
+    <Content Include="istmad-assets\images\sidebar\istmad-side-02.jpg" />
+    <Content Include="istmad-assets\images\sidebar\istmad-side-02.png" />
+    <Content Include="istmad-assets\images\sidebar\istmad-side-03.jpg" />
+    <Content Include="istmad-assets\images\sidebar\photo-gallery-img1.jpg" />
+    <Content Include="istmad-assets\images\sidebar\photo-gallery-img2.jpg" />
+    <Content Include="istmad-assets\images\sidebar\photo-gallery-img3.jpg" />
+    <Content Include="istmad-assets\images\sidebar\photo-gallery-img4.jpg" />
+    <Content Include="istmad-assets\images\sidebar\photo-gallery-img5.jpg" />
+    <Content Include="istmad-assets\images\sidebar\photo-gallery-img6.jpg" />
+    <Content Include="istmad-assets\images\slides\istmad-banner.jpg" />
+    <Content Include="istmad-assets\images\slides\istmad-banner01.jpg" />
+    <Content Include="istmad-assets\images\slides\istmad-banner02.jpg" />
+    <Content Include="istmad-assets\images\slides\slide-v1-1.jpg" />
+    <Content Include="istmad-assets\images\slides\slide-v1-2.jpg" />
+    <Content Include="istmad-assets\images\slides\slide-v2-1.jpg" />
+    <Content Include="istmad-assets\images\slides\slide-v3-1.png" />
+    <Content Include="istmad-assets\images\team\team-details-img1.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img1.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img2.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img3.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img4.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img5.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img6.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img7.jpg" />
+    <Content Include="istmad-assets\images\team\team-v1-img8.jpg" />
+    <Content Include="istmad-assets\images\team\team-v2-img1.jpg" />
+    <Content Include="istmad-assets\images\team\team-v2-img2.jpg" />
+    <Content Include="istmad-assets\images\team\team-v2-img3.jpg" />
+    <Content Include="istmad-assets\images\team\team-v2-img4.jpg" />
+    <Content Include="istmad-assets\images\team\team-v3-img1.jpg" />
+    <Content Include="istmad-assets\images\team\team-v3-img2.jpg" />
+    <Content Include="istmad-assets\images\team\team-v3-img3.jpg" />
+    <Content Include="istmad-assets\images\team\team-v3-img4.jpg" />
+    <Content Include="istmad-assets\images\team\team-v3-img5.jpg" />
+    <Content Include="istmad-assets\images\team\team-v3-img6.jpg" />
+    <Content Include="istmad-assets\images\testimonial\testimonial-v1-1.jpg" />
+    <Content Include="istmad-assets\images\testimonial\testimonial-v1-2.jpg" />
+    <Content Include="istmad-assets\images\testimonial\testimonial-v1-3.jpg" />
+    <Content Include="istmad-assets\images\testimonial\testimonial-v3-2.jpg" />
+    <Content Include="istmad-assets\images\testimonial\testimonial-v3-img1.png" />
+    <Content Include="istmad-assets\js\custom.js" />
+    <Content Include="istmad-assets\vendors\animate\animate.min.css" />
+    <Content Include="istmad-assets\vendors\animate\custom-animate.css" />
+    <Content Include="istmad-assets\vendors\bootstrap-select\css\bootstrap-select.min.css" />
+    <Content Include="istmad-assets\vendors\bootstrap-select\js\bootstrap-select.min.js" />
+    <Content Include="istmad-assets\vendors\bootstrap\css\bootstrap.min.css" />
+    <Content Include="istmad-assets\vendors\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="istmad-assets\vendors\bxslider\jquery.bxslider.css" />
+    <Content Include="istmad-assets\vendors\bxslider\jquery.bxslider.min.js" />
+    <Content Include="istmad-assets\vendors\circleType\jquery.circleType.js" />
+    <Content Include="istmad-assets\vendors\circleType\jquery.lettering.min.js" />
+    <Content Include="istmad-assets\vendors\fontawesome\css\all.min.css" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="istmad-assets\vendors\images\icon\bx_loader.html" />
+    <Content Include="istmad-assets\vendors\img\bx-slider\controls.html" />
+    <Content Include="istmad-assets\vendors\isotope\isotope.js" />
+    <Content Include="istmad-assets\vendors\jarallax\jarallax.min.js" />
+    <Content Include="istmad-assets\vendors\jquery-ajaxchimp\jquery.ajaxchimp.min.js" />
+    <Content Include="istmad-assets\vendors\jquery-appear\jquery.appear.min.js" />
+    <Content Include="istmad-assets\vendors\jquery-magnific-popup\jquery.magnific-popup.css" />
+    <Content Include="istmad-assets\vendors\jquery-magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="istmad-assets\vendors\jquery-migrate\jquery-migrate.min.js" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="istmad-assets\vendors\jquery-ui\jquery-ui.css" />
+    <Content Include="istmad-assets\vendors\jquery-ui\jquery-ui.js" />
+    <Content Include="istmad-assets\vendors\jquery-validate\jquery.validate.min.js" />
+    <Content Include="istmad-assets\vendors\jquery\jquery-3.6.0.min.js" />
+    <Content Include="istmad-assets\vendors\nice-select\jquery.nice-select.min.js" />
+    <Content Include="istmad-assets\vendors\nice-select\nice-select.css" />
+    <Content Include="istmad-assets\vendors\nouislider\nouislider.min.css" />
+    <Content Include="istmad-assets\vendors\nouislider\nouislider.min.js" />
+    <Content Include="istmad-assets\vendors\nouislider\nouislider.pips.css" />
+    <Content Include="istmad-assets\vendors\odometer\odometer.min.css" />
+    <Content Include="istmad-assets\vendors\odometer\odometer.min.js" />
+    <Content Include="istmad-assets\vendors\owl-carousel\owl.carousel.min.css" />
+    <Content Include="istmad-assets\vendors\owl-carousel\owl.carousel.min.js" />
+    <Content Include="istmad-assets\vendors\owl-carousel\owl.theme.default.min.css" />
+    <Content Include="istmad-assets\vendors\owl-carousel\owl.video.play.html" />
+    <Content Include="istmad-assets\vendors\parallax\parallax.min.js" />
+    <Content Include="istmad-assets\vendors\swiper\swiper.min.css" />
+    <Content Include="istmad-assets\vendors\swiper\swiper.min.js" />
+    <Content Include="istmad-assets\vendors\thm-icons\fonts\icomoon78ed.svg" />
+    <Content Include="istmad-assets\vendors\thm-icons\style.css" />
+    <Content Include="istmad-assets\vendors\timepicker\images\ui-icons_444444_256x240.html" />
+    <Content Include="istmad-assets\vendors\timepicker\timePicker.css" />
+    <Content Include="istmad-assets\vendors\timepicker\timePicker.js" />
+    <Content Include="istmad-assets\vendors\tiny-slider\tiny-slider.min.css" />
+    <Content Include="istmad-assets\vendors\tiny-slider\tiny-slider.min.js" />
+    <Content Include="istmad-assets\vendors\typed-2.0.11\typed-2.0.11.js" />
+    <Content Include="istmad-assets\vendors\vegas\overlays\02.html" />
+    <Content Include="istmad-assets\vendors\vegas\vegas.min.css" />
+    <Content Include="istmad-assets\vendors\vegas\vegas.min.js" />
+    <Content Include="istmad-assets\vendors\wnumb\wNumb.min.js" />
+    <Content Include="istmad-assets\vendors\wow\wow.js" />
+    <Content Include="maintenance-des-systemes-informatiques.aspx" />
+    <Content Include="marketing-commerce-vente.aspx" />
+    <Content Include="partenaires.aspx" />
+    <Content Include="promoteur.aspx" />
+    <Content Include="reseaux-et-securite.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="istmad-assets\images\favicons\site.webmanifest" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="istmad-assets\vendors\fontawesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="istmad-assets\vendors\thm-icons\fonts\icomoon78ed.eot" />
+    <Content Include="istmad-assets\vendors\thm-icons\fonts\icomoon78ed.ttf" />
+    <Content Include="istmad-assets\vendors\thm-icons\fonts\icomoon78ed.woff" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\common.css.map" />
+    <Content Include="Content\less\Bootstrap\.csscomb.json" />
+    <Content Include="Content\less\Bootstrap\.csslintrc" />
+    <Content Include="Content\less\Bootstrap\alerts.less" />
+    <Content Include="Content\less\Bootstrap\badges.less" />
+    <Content Include="Content\less\Bootstrap\bootstrap.less" />
+    <Content Include="Content\less\Bootstrap\breadcrumbs.less" />
+    <Content Include="Content\less\Bootstrap\button-groups.less" />
+    <Content Include="Content\less\Bootstrap\buttons.less" />
+    <Content Include="Content\less\Bootstrap\carousel.less" />
+    <Content Include="Content\less\Bootstrap\close.less" />
+    <Content Include="Content\less\Bootstrap\code.less" />
+    <Content Include="Content\less\Bootstrap\component-animations.less" />
+    <Content Include="Content\less\Bootstrap\dropdowns.less" />
+    <Content Include="Content\less\Bootstrap\forms.less" />
+    <Content Include="Content\less\Bootstrap\glyphicons.less" />
+    <Content Include="Content\less\Bootstrap\grid.less" />
+    <Content Include="Content\less\Bootstrap\input-groups.less" />
+    <Content Include="Content\less\Bootstrap\jumbotron.less" />
+    <Content Include="Content\less\Bootstrap\labels.less" />
+    <Content Include="Content\less\Bootstrap\list-group.less" />
+    <Content Include="Content\less\Bootstrap\media.less" />
+    <Content Include="Content\less\Bootstrap\mixins.less" />
+    <Content Include="Content\less\Bootstrap\mixins\alerts.less" />
+    <Content Include="Content\less\Bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\less\Bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\less\Bootstrap\mixins\buttons.less" />
+    <Content Include="Content\less\Bootstrap\mixins\center-block.less" />
+    <Content Include="Content\less\Bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\less\Bootstrap\mixins\forms.less" />
+    <Content Include="Content\less\Bootstrap\mixins\gradients.less" />
+    <Content Include="Content\less\Bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\less\Bootstrap\mixins\grid.less" />
+    <Content Include="Content\less\Bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\less\Bootstrap\mixins\image.less" />
+    <Content Include="Content\less\Bootstrap\mixins\labels.less" />
+    <Content Include="Content\less\Bootstrap\mixins\list-group.less" />
+    <Content Include="Content\less\Bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\less\Bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\less\Bootstrap\mixins\opacity.less" />
+    <Content Include="Content\less\Bootstrap\mixins\pagination.less" />
+    <Content Include="Content\less\Bootstrap\mixins\panels.less" />
+    <Content Include="Content\less\Bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\less\Bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\less\Bootstrap\mixins\reset-text.less" />
+    <Content Include="Content\less\Bootstrap\mixins\resize.less" />
+    <Content Include="Content\less\Bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\less\Bootstrap\mixins\size.less" />
+    <Content Include="Content\less\Bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\less\Bootstrap\mixins\table-row.less" />
+    <Content Include="Content\less\Bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\less\Bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\less\Bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\less\Bootstrap\modals.less" />
+    <Content Include="Content\less\Bootstrap\navbar.less" />
+    <Content Include="Content\less\Bootstrap\navs.less" />
+    <Content Include="Content\less\Bootstrap\normalize.less" />
+    <Content Include="Content\less\Bootstrap\pager.less" />
+    <Content Include="Content\less\Bootstrap\pagination.less" />
+    <Content Include="Content\less\Bootstrap\panels.less" />
+    <Content Include="Content\less\Bootstrap\popovers.less" />
+    <Content Include="Content\less\Bootstrap\print.less" />
+    <Content Include="Content\less\Bootstrap\progress-bars.less" />
+    <Content Include="Content\less\Bootstrap\responsive-embed.less" />
+    <Content Include="Content\less\Bootstrap\responsive-utilities.less" />
+    <Content Include="Content\less\Bootstrap\scaffolding.less" />
+    <Content Include="Content\less\Bootstrap\tables.less" />
+    <Content Include="Content\less\Bootstrap\theme.less" />
+    <Content Include="Content\less\Bootstrap\thumbnails.less" />
+    <Content Include="Content\less\Bootstrap\tooltip.less" />
+    <Content Include="Content\less\Bootstrap\type.less" />
+    <Content Include="Content\less\Bootstrap\utilities.less" />
+    <Content Include="Content\less\Bootstrap\variables.less" />
+    <Content Include="Content\less\Bootstrap\wells.less" />
+    <Content Include="Content\less\common.css.map" />
+    <Content Include="Content\less\common.less" />
+    <Content Include="Content\less\FontAwesome\animated.less" />
+    <Content Include="Content\less\FontAwesome\bordered-pulled.less" />
+    <Content Include="Content\less\FontAwesome\core.less" />
+    <Content Include="Content\less\FontAwesome\fixed-width.less" />
+    <Content Include="Content\less\FontAwesome\font-awesome.less" />
+    <Content Include="Content\less\FontAwesome\icons.less" />
+    <Content Include="Content\less\FontAwesome\larger.less" />
+    <Content Include="Content\less\FontAwesome\list.less" />
+    <Content Include="Content\less\FontAwesome\mixins.less" />
+    <Content Include="Content\less\FontAwesome\path.less" />
+    <Content Include="Content\less\FontAwesome\rotated-flipped.less" />
+    <Content Include="Content\less\FontAwesome\stacked.less" />
+    <Content Include="Content\less\FontAwesome\variables.less" />
+    <Content Include="Content\less\libraries.less" />
+    <Content Include="Content\less\login.less" />
+    <Content Include="Content\less\responsive.less" />
+    <Content Include="Content\less\site.css.map" />
+    <Content Include="Content\less\site.less" />
+    <Content Include="Content\less\structure.less" />
+    <Content Include="istmad-assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="istmad-assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="istmad-assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="istmad-assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="istmad-assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="istmad-assets\fonts\icofont.woff" />
+    <Content Include="istmad-assets\fonts\icofont.woff2" />
+    <Content Include="istmad-assets\fonts\lightcaseeead.eot" />
+    <Content Include="istmad-assets\fonts\lightcaseeead.ttf" />
+    <Content Include="istmad-assets\fonts\lightcaseeead.woff" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\site.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="telecommunications.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="actualites.aspx.cs">
+      <DependentUpon>actualites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="actualites.aspx.designer.cs">
+      <DependentUpon>actualites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admission.aspx.cs">
+      <DependentUpon>admission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admission.aspx.designer.cs">
+      <DependentUpon>admission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\Corazon\Bundles\CFormatting.cs" />
+    <Compile Include="App_Start\Corazon\Bundles\Corazon.cs" />
+    <Compile Include="App_Start\Corazon\Bundles\CSecurity.cs" />
+    <Compile Include="App_Start\Corazon\Bundles\CServices.cs" />
+    <Compile Include="App_Start\Corazon\Exception\CorazonException.cs" />
+    <Compile Include="App_Start\Corazon\Formatting\CDateFormat.cs" />
+    <Compile Include="App_Start\Corazon\Formatting\CFormatExchange.cs" />
+    <Compile Include="App_Start\Corazon\Formatting\CInputFormat.cs" />
+    <Compile Include="App_Start\Corazon\Models\Email\MEmailClient.cs" />
+    <Compile Include="App_Start\Corazon\Models\Email\MEmailMessage.cs" />
+    <Compile Include="App_Start\Corazon\Models\Email\MEmailProvider.cs" />
+    <Compile Include="App_Start\Corazon\Models\Email\MEmailTask.cs" />
+    <Compile Include="App_Start\Corazon\Security\CCrypto.cs" />
+    <Compile Include="App_Start\Corazon\Services\CCompression.cs" />
+    <Compile Include="App_Start\Corazon\Services\CEmailService.cs" />
+    <Compile Include="App_Start\Corazon\Services\CErrorHandler.cs" />
+    <Compile Include="App_Start\Corazon\Services\CGenerate.cs" />
+    <Compile Include="App_Start\Corazon\Services\CInteraction.cs" />
+    <Compile Include="App_Start\Corazon\Services\CLanguage.cs" />
+    <Compile Include="App_Start\Corazon\Services\CObfuscation.cs" />
+    <Compile Include="App_Start\Corazon\Services\CSqlBackup.cs" />
+    <Compile Include="App_Start\Corazon\Services\CUri.cs" />
+    <Compile Include="App_Start\Corazon\Services\Query\CQuery.cs" />
+    <Compile Include="App_Start\Corazon\Services\Query\CQueryBuilder.cs" />
+    <Compile Include="App_Start\Foumban\Bundles\Foumban.cs" />
+    <Compile Include="App_Start\Foumban\Enums\MediaType.cs" />
+    <Compile Include="App_Start\Foumban\Enums\UserType.cs" />
+    <Compile Include="App_Start\Foumban\Management\CExhibition.cs" />
+    <Compile Include="App_Start\Foumban\Management\CMedia.cs" />
+    <Compile Include="App_Start\Foumban\Management\CPlace.cs" />
+    <Compile Include="App_Start\Foumban\Management\CUser.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="assurance.aspx.cs">
+      <DependentUpon>assurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="assurance.aspx.designer.cs">
+      <DependentUpon>assurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="atouts-Valeurs-Missions.aspx.cs">
+      <DependentUpon>atouts-Valeurs-Missions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="atouts-Valeurs-Missions.aspx.designer.cs">
+      <DependentUpon>atouts-Valeurs-Missions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="banque-et-finance.aspx.cs">
+      <DependentUpon>banque-et-finance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="banque-et-finance.aspx.designer.cs">
+      <DependentUpon>banque-et-finance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bts-carrieres-juridiques.aspx.cs">
+      <DependentUpon>bts-carrieres-juridiques.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bts-carrieres-juridiques.aspx.designer.cs">
+      <DependentUpon>bts-carrieres-juridiques.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bts-commerce-vente.aspx.cs">
+      <DependentUpon>bts-commerce-vente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bts-commerce-vente.aspx.designer.cs">
+      <DependentUpon>bts-commerce-vente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bts-genie-informatique.aspx.cs">
+      <DependentUpon>bts-genie-informatique.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bts-genie-informatique.aspx.designer.cs">
+      <DependentUpon>bts-genie-informatique.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bts-gestion.aspx.cs">
+      <DependentUpon>bts-gestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bts-gestion.aspx.designer.cs">
+      <DependentUpon>bts-gestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bts-information-et-communication.aspx.cs">
+      <DependentUpon>bts-information-et-communication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bts-information-et-communication.aspx.designer.cs">
+      <DependentUpon>bts-information-et-communication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bts-resaux-et-telecommunications.aspx.cs">
+      <DependentUpon>bts-resaux-et-telecommunications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bts-resaux-et-telecommunications.aspx.designer.cs">
+      <DependentUpon>bts-resaux-et-telecommunications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bts.aspx.cs">
+      <DependentUpon>bts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bts.aspx.designer.cs">
+      <DependentUpon>bts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commerce-international.aspx.cs">
+      <DependentUpon>commerce-international.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commerce-international.aspx.designer.cs">
+      <DependentUpon>commerce-international.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="communication-des-organisations.aspx.cs">
+      <DependentUpon>communication-des-organisations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="communication-des-organisations.aspx.designer.cs">
+      <DependentUpon>communication-des-organisations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comptabilite-et-gestion-des-entreprises.aspx.cs">
+      <DependentUpon>comptabilite-et-gestion-des-entreprises.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="comptabilite-et-gestion-des-entreprises.aspx.designer.cs">
+      <DependentUpon>comptabilite-et-gestion-des-entreprises.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="douane-et-transit.aspx.cs">
+      <DependentUpon>douane-et-transit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="douane-et-transit.aspx.designer.cs">
+      <DependentUpon>douane-et-transit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="droit-des-affaires-et-de-lentreprise.aspx.cs">
+      <DependentUpon>droit-des-affaires-et-de-lentreprise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="droit-des-affaires-et-de-lentreprise.aspx.designer.cs">
+      <DependentUpon>droit-des-affaires-et-de-lentreprise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="droit-foncier-et-domanial.aspx.cs">
+      <DependentUpon>droit-foncier-et-domanial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="droit-foncier-et-domanial.aspx.designer.cs">
+      <DependentUpon>droit-foncier-et-domanial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="e-commerce-et-marketing-numerique.aspx.cs">
+      <DependentUpon>e-commerce-et-marketing-numerique.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="e-commerce-et-marketing-numerique.aspx.designer.cs">
+      <DependentUpon>e-commerce-et-marketing-numerique.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="galerie-de-photos.aspx.cs">
+      <DependentUpon>galerie-de-photos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="galerie-de-photos.aspx.designer.cs">
+      <DependentUpon>galerie-de-photos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="genie-informatique.aspx.cs">
+      <DependentUpon>genie-informatique.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="genie-informatique.aspx.designer.cs">
+      <DependentUpon>genie-informatique.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="genie-logiciel.aspx.cs">
+      <DependentUpon>genie-logiciel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="genie-logiciel.aspx.designer.cs">
+      <DependentUpon>genie-logiciel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestion-de-la-qualite.aspx.cs">
+      <DependentUpon>gestion-de-la-qualite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestion-de-la-qualite.aspx.designer.cs">
+      <DependentUpon>gestion-de-la-qualite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestion-des-projets.aspx.cs">
+      <DependentUpon>gestion-des-projets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestion-des-projets.aspx.designer.cs">
+      <DependentUpon>gestion-des-projets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestion-des-ressources-humaines.aspx.cs">
+      <DependentUpon>gestion-des-ressources-humaines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestion-des-ressources-humaines.aspx.designer.cs">
+      <DependentUpon>gestion-des-ressources-humaines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestion-des-systemes-dInformation.aspx.cs">
+      <DependentUpon>gestion-des-systemes-dInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestion-des-systemes-dInformation.aspx.designer.cs">
+      <DependentUpon>gestion-des-systemes-dInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestion-fiscale.aspx.cs">
+      <DependentUpon>gestion-fiscale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestion-fiscale.aspx.designer.cs">
+      <DependentUpon>gestion-fiscale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gestion-logistique-et-transport.aspx.cs">
+      <DependentUpon>gestion-logistique-et-transport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gestion-logistique-et-transport.aspx.designer.cs">
+      <DependentUpon>gestion-logistique-et-transport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hnd.aspx.cs">
+      <DependentUpon>hnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hnd.aspx.designer.cs">
+      <DependentUpon>hnd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="infographie-et-web-design.aspx.cs">
+      <DependentUpon>infographie-et-web-design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="infographie-et-web-design.aspx.designer.cs">
+      <DependentUpon>infographie-et-web-design.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informatique-industriel-et-automatisme.aspx.cs">
+      <DependentUpon>informatique-industriel-et-automatisme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informatique-industriel-et-automatisme.aspx.designer.cs">
+      <DependentUpon>informatique-industriel-et-automatisme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inscription.aspx.cs">
+      <DependentUpon>inscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inscription.aspx.designer.cs">
+      <DependentUpon>inscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maintenance-des-systemes-informatiques.aspx.cs">
+      <DependentUpon>maintenance-des-systemes-informatiques.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maintenance-des-systemes-informatiques.aspx.designer.cs">
+      <DependentUpon>maintenance-des-systemes-informatiques.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="marketing-commerce-vente.aspx.cs">
+      <DependentUpon>marketing-commerce-vente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="marketing-commerce-vente.aspx.designer.cs">
+      <DependentUpon>marketing-commerce-vente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="partenaires.aspx.cs">
+      <DependentUpon>partenaires.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="partenaires.aspx.designer.cs">
+      <DependentUpon>partenaires.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="promoteur.aspx.cs">
+      <DependentUpon>promoteur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="promoteur.aspx.designer.cs">
+      <DependentUpon>promoteur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reseaux-et-securite.aspx.cs">
+      <DependentUpon>reseaux-et-securite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reseaux-et-securite.aspx.designer.cs">
+      <DependentUpon>reseaux-et-securite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="telecommunications.aspx.cs">
+      <DependentUpon>telecommunications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telecommunications.aspx.designer.cs">
+      <DependentUpon>telecommunications.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="istmad-assets\fiche\" />
+    <Folder Include="pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53044</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44388/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
